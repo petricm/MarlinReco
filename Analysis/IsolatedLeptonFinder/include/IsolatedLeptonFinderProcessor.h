@@ -67,67 +67,67 @@ class IsolatedLeptonFinderProcessor : public Processor {
 		void getCalEnergy( ReconstructedParticle* pfo , float* cale) ;
 
 		/** Input collection */
-		std::string _inputPFOsCollection;
+		std::string _inputPFOsCollection{};
 
 		/** Output collection (all input with isolated leptons removed) */
-		std::string _outputPFOsRemovedIsoLepCollection;
+		std::string _outputPFOsRemovedIsoLepCollection{};
 
 		/** Output collection of isolated leptons */
-		std::string _outputIsoLepCollection;
+		std::string _outputIsoLepCollection{};
 
-		LCCollection* _pfoCol;
-		float _cosConeAngle;
+		LCCollection* _pfoCol{};
+		float _cosConeAngle{};
 
 		/** If set to true, uses PID cuts */
-		bool _usePID;
-		float _electronMinEnergyDepositByMomentum;
-		float _electronMaxEnergyDepositByMomentum;
-		float _electronMinEcalToHcalFraction;
-		float _electronMaxEcalToHcalFraction;
-		float _muonMinEnergyDepositByMomentum;
-		float _muonMaxEnergyDepositByMomentum;
-		float _muonMinEcalToHcalFraction;
-		float _muonMaxEcalToHcalFraction;
+		bool _usePID{};
+		float _electronMinEnergyDepositByMomentum{};
+		float _electronMaxEnergyDepositByMomentum{};
+		float _electronMinEcalToHcalFraction{};
+		float _electronMaxEcalToHcalFraction{};
+		float _muonMinEnergyDepositByMomentum{};
+		float _muonMaxEnergyDepositByMomentum{};
+		float _muonMinEcalToHcalFraction{};
+		float _muonMaxEcalToHcalFraction{};
 
 		/** If set to true, uses impact parameter cuts */
-		bool _useImpactParameter;
-		float _minD0;
-		float _maxD0;
-		float _minZ0;
-		float _maxZ0;
-		float _minR0;
-		float _maxR0;
+		bool _useImpactParameter{};
+		float _minD0{};
+		float _maxD0{};
+		float _minZ0{};
+		float _maxZ0{};
+		float _minR0{};
+		float _maxR0{};
 
 		/** If set to true, uses impact parameter significance cuts */
-		bool _useImpactParameterSignificance;
-		float _minD0Sig;
-		float _maxD0Sig;
-		float _minZ0Sig;
-		float _maxZ0Sig;
-		float _minR0Sig;
-		float _maxR0Sig;
+		bool _useImpactParameterSignificance{};
+		float _minD0Sig{};
+		float _maxD0Sig{};
+		float _minZ0Sig{};
+		float _maxZ0Sig{};
+		float _minR0Sig{};
+		float _maxR0Sig{};
 
 		/** If set to true, uses rectangular cuts for isolation */
-		bool _useRectangularIsolation;
-		float _isoMinTrackEnergy;
-		float _isoMaxTrackEnergy;
-		float _isoMinConeEnergy;
-		float _isoMaxConeEnergy;
+		bool _useRectangularIsolation{};
+		float _isoMinTrackEnergy{};
+		float _isoMaxTrackEnergy{};
+		float _isoMinConeEnergy{};
+		float _isoMaxConeEnergy{};
 
 		/** If set to true, uses polynomial cuts for isolation */
-		bool _usePolynomialIsolation;
-		float _isoPolynomialA;
-		float _isoPolynomialB;
-		float _isoPolynomialC;
+		bool _usePolynomialIsolation{};
+		float _isoPolynomialA{};
+		float _isoPolynomialB{};
+		float _isoPolynomialC{};
 
 		/** If set to true, uses jet-based isolation (LAL algorithm) */
-		bool _useJetIsolation;
-		std::string _jetCollectionName;
-		std::map<ReconstructedParticle*,ReconstructedParticle*> _rpJetMap;
-		float _jetIsoVetoMinXt;
-		float _jetIsoVetoMaxXt;
-		float _jetIsoVetoMinZ;
-		float _jetIsoVetoMaxZ;
+		bool _useJetIsolation{};
+		std::string _jetCollectionName{};
+		std::map<ReconstructedParticle*,ReconstructedParticle*> _rpJetMap{};
+		float _jetIsoVetoMinXt{};
+		float _jetIsoVetoMaxXt{};
+		float _jetIsoVetoMinZ{};
+		float _jetIsoVetoMaxZ{};
 } ;
 
 #endif
