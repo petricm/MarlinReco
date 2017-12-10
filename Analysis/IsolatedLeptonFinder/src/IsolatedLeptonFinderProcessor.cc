@@ -250,7 +250,7 @@ void IsolatedLeptonFinderProcessor::init() {
 	printParameters() ;
 }
 
-void IsolatedLeptonFinderProcessor::processRunHeader( LCRunHeader* run) { 
+void IsolatedLeptonFinderProcessor::processRunHeader( LCRunHeader*  /*run*/) { 
 } 
 
 void IsolatedLeptonFinderProcessor::processEvent( LCEvent * evt ) { 
@@ -300,7 +300,7 @@ void IsolatedLeptonFinderProcessor::processEvent( LCEvent * evt ) {
 	evt->addCollection( otIsoLepCol, _outputIsoLepCollection.c_str() );
 }
 
-void IsolatedLeptonFinderProcessor::check( LCEvent * evt ) { 
+void IsolatedLeptonFinderProcessor::check( LCEvent *  /*evt*/ ) { 
 }
 
 void IsolatedLeptonFinderProcessor::end() { 
